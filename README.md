@@ -63,26 +63,19 @@ Training accuracy stabilizes around 30-32% while validation accuracy reaches 27-
 The gap between training and validation performance indicates appropriate model capacity
 4.2 Convergence Analysis
 Both architectures demonstrate healthy learning patterns with decreasing loss and increasing accuracy over epochs. The absence of significant overfitting suggests appropriate regularization and data augmentation strategies.
+![alt text](https://github.com/Zaeem-A/DL_A1/blob/main/f1_curve.png)
+![alt text](https://github.com/Zaeem-A/DL_A1/blob/main/kappa_curve.png)
+![alt text](https://github.com/Zaeem-A/DL_A1/blob/main/loss_curve.png)
+![alt text](https://github.com/Zaeem-A/DL_A1/blob/main/multi_modal_training_curves_classification.png)
+![alt text](https://github.com/Zaeem-A/DL_A1/blob/main/train_acc_curve.png)
+![alt text](https://github.com/Zaeem-A/DL_A1/blob/main/val_acc_curve.png)
 
-6. Performance Evaluation
+7. Performance Evaluation
 5.1 Categorical Classification Metrics
-Metric
-VGG16
-ResNet18
-Better
-Validation Accuracy
-0.4318
-0.4418
-ResNet18
-F1-Score
-0.4305
-0.4389
-ResNet18
-Cohen's Kappa
-0.3503
-0.3610
-ResNet18
-
+Metric VGG16 ResNet18 Better
+Validation Accuracy 0.4318 0.4418 ResNet18
+F1-Score 0.4305 0.4389 ResNet18
+Cohen's Kappa 0.3503 0.3610 ResNet18
 
 Analysis:
 ResNet18 consistently outperforms VGG16 across all classification metrics
@@ -98,20 +91,10 @@ On VGG:
 
 5.2 Continuous Domain Evaluation
 Valence Prediction:
-Metric
-VGG16
-ResNet18
-Better
-RMSE
-0.3803
-0.4058
-VGG16
-Correlation (CORR)
-0.5641
-0.5119
-VGG16
-Sign Agreement (SAGR)
-0.7647
+Metric VGG16 ResNet18 Better
+RMSE 0.3803 0.4058 VGG16
+Correlation (CORR) 0.5641 0.5119 VGG16
+Sign Agreement (SAGR) 0.7647
 0.7359
 VGG16
 CCC
