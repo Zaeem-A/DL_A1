@@ -1,6 +1,6 @@
-Deep Learning Assignment Report
-22i-1933
-Zaeem Ahmed
+### Deep Learning Assignment Report
+### 22i-1933
+### Zaeem Ahmed
 
 1. Summary
 This report presents the implementation and comparison of two CNN architectures (VGG16 and ResNet18) for facial expression recognition, along with valence and arousal prediction. The task involves multi-modal learning where models simultaneously classify facial expressions into 8 categories and predict continuous valence/arousal values. ResNet18 demonstrated superior performance across most metrics, achieving 44.18% validation accuracy compared to VGG16's 43.18%.
@@ -70,12 +70,33 @@ Both architectures demonstrate healthy learning patterns with decreasing loss an
 ![alt text](https://github.com/Zaeem-A/DL_A1/blob/main/train_acc_curve.png)
 ![alt text](https://github.com/Zaeem-A/DL_A1/blob/main/val_acc_curve.png)
 
-7. Performance Evaluation
-5.1 Categorical Classification Metrics
-Metric VGG16 ResNet18 Better
-Validation Accuracy 0.4318 0.4418 ResNet18
-F1-Score 0.4305 0.4389 ResNet18
-Cohen's Kappa 0.3503 0.3610 ResNet18
+## 7. Performance Evaluation
+
+### 5.1 Categorical Classification Metrics
+
+| Metric | VGG16 | ResNet18 | Better |
+|--------|-------|----------|--------|
+| **Validation Accuracy** | 0.4318 | **0.4418** | ResNet18 |
+| **F1-Score** | 0.4305 | **0.4389** | ResNet18 |
+| **Cohen's Kappa** | 0.3503 | **0.3610** | ResNet18 |
+
+### 5.2 Continuous Domain Evaluation
+
+#### Valence Prediction:
+| Metric | VGG16 | ResNet18 | Better |
+|--------|-------|----------|--------|
+| **RMSE** | **0.3803** | 0.4058 | VGG16 |
+| **Correlation (CORR)** | **0.5641** | 0.5119 | VGG16 |
+| **Sign Agreement (SAGR)** | **0.7647** | 0.7359 | VGG16 |
+| **CCC** | **0.5258** | 0.4867 | VGG16 |
+
+#### Arousal Prediction:
+| Metric | VGG16 | ResNet18 | Better |
+|--------|-------|----------|--------|
+| **RMSE** | **0.3364** | 0.3525 | VGG16 |
+| **Correlation (CORR)** | **0.4598** | 0.3769 | VGG6 |
+| **Sign Agreement (SAGR)** | **0.7935** | 0.7872 | VGG16 |
+| **CCC** | **0.4083** | 0.3295 | VGG16 |
 
 Analysis:
 ResNet18 consistently outperforms VGG16 across all classification metrics
@@ -85,44 +106,27 @@ Kappa values indicate fair to moderate agreement beyond chance
 
 On Resnet:
 
-
+![alt text](https://github.com/Zaeem-A/DL_A1/blob/main/resnet.png)
 On VGG:
+![alt text](https://github.com/Zaeem-A/DL_A1/blob/main/vgg.png)
 
+### 5.2 Continuous Domain Evaluation
 
-5.2 Continuous Domain Evaluation
-Valence Prediction:
-Metric VGG16 ResNet18 Better
-RMSE 0.3803 0.4058 VGG16
-Correlation (CORR) 0.5641 0.5119 VGG16
-Sign Agreement (SAGR) 0.7647
-0.7359
-VGG16
-CCC
-0.5258
-0.4867
-VGG16
+#### Valence Prediction:
+| Metric | VGG16 | ResNet18 | Better |
+|--------|-------|----------|--------|
+| **RMSE** | **0.3803** | 0.4058 | VGG16 |
+| **Correlation (CORR)** | **0.5641** | 0.5119 | VGG16 |
+| **Sign Agreement (SAGR)** | **0.7647** | 0.7359 | VGG16 |
+| **CCC** | **0.5258** | 0.4867 | VGG16 |
 
-Arousal Prediction:
-Metric
-VGG16
-ResNet18
-Better
-RMSE
-0.3364
-0.3525
-VGG16
-Correlation (CORR)
-0.4598
-0.3769
-VGG16
-Sign Agreement (SAGR)
-0.7935
-0.7872
-VGG16
-CCC
-0.4083
-0.3295
-VGG16
+#### Arousal Prediction:
+| Metric | VGG16 | ResNet18 | Better |
+|--------|-------|----------|--------|
+| **RMSE** | **0.3364** | 0.3525 | VGG16 |
+| **Correlation (CORR)** | **0.4598** | 0.3769 | VGG16 |
+| **Sign Agreement (SAGR)** | **0.7935** | 0.7872 | VGG16 |
+| **CCC** | **0.4083** | 0.3295 | VGG16 |
 
 5.3 Continuous Domain Metrics Analysis
 Root Mean Square Error (RMSE):
